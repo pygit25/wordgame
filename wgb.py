@@ -10,6 +10,8 @@ def obfuscated_view(word, setIn):
 def letter_checker(wg, letter):
     if letter in wg[1]:
         lcOut = '\n\tGood, ' + letter + ' is in word'
+    elif letter in wg[4]:
+        lcOut = '\n\tLetter ' + letter + ' was guessed already before'
     else: 
         lcOut = '\n\tBad, ' + letter + ' is NOT in word'
         wg[2] -= 1       
