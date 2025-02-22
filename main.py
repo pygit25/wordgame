@@ -35,9 +35,9 @@ def main_loop():
             main_loop()
             break
         
-        wg[4].add(leIn) ## add offered letter to the set()        
+        wg[4].add(leIn) ## add offered letter to the set()   
+        print(letter_checker(wg, leIn))     
         print(ascii_draw(wg[2]) + str(wg[2]) + " lives left")
-        print(letter_checker(wg, leIn))
         print('\t\t\t\t', wg) ## for debugging comment for real game
         print('\n') # just extra line, for visual clarity
 
