@@ -14,7 +14,8 @@ def letter_checker(wg, letter):
         lcOut = '\n\tLetter ' + letter + ' was guessed already before'
     else: 
         lcOut = '\n\tBad, ' + letter + ' is NOT in word'
-        wg[2] -= 1       
+        wg[2] -= 1 
+        print(ascii_draw(wg[2]) + str(wg[2]) + " lives left")      
     return lcOut
 
 def ascii_draw(drNum):
