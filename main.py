@@ -6,6 +6,7 @@ print('for quitting, type "quit" command. "new" for starting with new word.')
 
 #################### set dL - difficulty level
 dL = diff_level(3) # default Difficulty level
+dM = 0 # development Mode 1 - yes, 0 - no, don't show data on screen
 
 def main_loop():
     wg = [ # wg - word game
@@ -17,7 +18,9 @@ def main_loop():
     , 0              # [5] int - inner loop counter
     ]
     
-    print('\t\t\t\t', wg, '\n') # on main loop starting state
+    if dM == 1:
+        print('\t\t\t\t', wg, '\n') # on main loop starting state
+
     
     while True:
         wg[5]+=1
@@ -37,7 +40,10 @@ def main_loop():
                  
         print(letter_checker(wg, leIn))  
         wg[4].add(leIn) ## add offered letter to the set()     
-        print('\t\t\t\t', wg) ## for debugging comment for real game
+        if dM == 1:
+            print('\t\t\t\t', wg, '\n') # dM 1, debugging mode
+        else:
+            print('\t\t\t\t', wg[5], wg[4], 'you have', wg[2], 'lives left')
         print('\n') # just extra line, for visual clarity
 
 main_loop() # starts the main loop
