@@ -32,11 +32,11 @@ def main_loop():
         leIn = input(askLetter)        
         if leIn == 'quit':
             print('..quitting, good bye')
-            break
+            return
         if leIn == 'new':
             print('\n')
             main_loop()
-            break
+            return
                  
         print(letter_checker(wg, leIn))  
         wg[4].add(leIn) ## add offered letter to the set()     
