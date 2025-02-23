@@ -9,14 +9,14 @@ def obfuscated_view(word, setIn):
 
 def letter_checker(wg, letter):
     if letter in wg[1]:
-        lcOut = '\n\tGood, ' + letter + ' is in word'
+        lcOut = 'Good, ' + letter + ' is in word'
     elif letter in wg[4]:
-        lcOut = '\n\tLetter ' + letter + ' was guessed already before'
+        lcOut = 'Letter ' + letter + ' was guessed already before'
     else: 
-        lcOut = '\n\tBad, ' + letter + ' is NOT in word'
+        lcOut = 'Bad, ' + letter + ' is NOT in word'
         wg[2] -= 1 
-        print(ascii_draw(wg[2]) + str(wg[2]) + " lives left")      
-    return lcOut
+        print(ascii_draw(wg[2]) + str(wg[2]) + " lives left\n")      
+    return '\n\t' + lcOut
 
 def ascii_draw(drNum):
     # drNum - drawing number
